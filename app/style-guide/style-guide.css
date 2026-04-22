@@ -1,0 +1,388 @@
+/* Container */
+.style-guide-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.style-guide-container h1 {
+  margin-bottom: 40px;
+  font-size: 48px;
+}
+
+/* Sections */
+.style-guide-section {
+  margin-bottom: 60px;
+}
+
+.style-guide-section h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #4f46e5;
+}
+
+/* Colors Section */
+.colors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.color-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-swatch {
+  width: 100%;
+  height: 120px;
+  border-radius: 0;
+}
+
+.color-swatch-primary {
+  background-color: #4f46e5;
+}
+
+.color-swatch-secondary {
+  background-color: #6b7280;
+}
+
+.color-swatch-text {
+  background-color: #171717;
+}
+
+.color-swatch-forms {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+}
+
+.color-swatch-error {
+  background-color: #dc2626;
+}
+
+.color-swatch-warning {
+  background-color: #f59e0b;
+}
+
+.color-swatch-success {
+  background-color: #10b981;
+}
+
+.color-swatch-info {
+  background-color: #3b82f6;
+}
+
+.color-swatch-background {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.color-info {
+  padding: 12px;
+}
+
+.color-info p {
+  margin: 0;
+}
+
+.color-info .color-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.color-info .color-code {
+  color: #6b7280;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+/* Font Family Section */
+.font-family-list {
+  display: grid;
+  gap: 20px;
+}
+
+.font-family-item {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.font-family-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.font-family-sample {
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #171717;
+  margin-top: 10px;
+}
+
+.font-poppins-sample {
+  font-family: var(--font-poppins);
+}
+
+.font-inter-sample {
+  font-family: var(--font-inter);
+}
+
+.font-details {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Typography Section */
+.typography-section {
+  margin-top: 20px;
+}
+
+.typography-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.typography-table th,
+.typography-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+}
+
+.typography-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #171717;
+}
+
+.typography-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.typography-sample {
+  margin: 10px 0;
+}
+
+.typography-sample.h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.typography-sample.h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.typography-sample.h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.typography-sample.h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.typography-sample.h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.typography-sample.h6 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.typography-sample.body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.typography-sample.paragraph {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.typography-sample.small {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.responsive-font-sizes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.responsive-item {
+  padding: 15px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.responsive-item h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #171717;
+}
+
+.responsive-item ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.responsive-item li {
+  margin-bottom: 5px;
+  color: #4b5563;
+}
+
+.responsive-label {
+  font-weight: 600;
+  color: #171717;
+}
+
+/* Components Section */
+.component-showcase {
+  margin-top: 30px;
+}
+
+.component-showcase h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #171717;
+}
+
+.component-showcase > p {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.component-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.component-section h4 {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #171717;
+  font-weight: 600;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.button-demo {
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-demo-bg {
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.code-example {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Monaco", "Courier New", monospace;
+  margin: 15px 0;
+}
+
+.props-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.props-table th,
+.props-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+}
+
+.props-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #171717;
+}
+
+.props-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.components-list {
+  padding-left: 20px;
+}
+
+.components-list li {
+  margin-bottom: 10px;
+}
+
+.components-list a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+/* Back to Home Button */
+.style-guide-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  transition: background-color 0.3s ease;
+}
+

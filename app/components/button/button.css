@@ -1,0 +1,297 @@
+/* Base Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
+  min-height: 36px;
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  min-height: 28px;
+}
+
+.btn-md {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 36px;
+}
+
+.btn-lg {
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 44px;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+
+/* Primary Fill */
+.btn-primary.btn-fill {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5;
+}
+
+.btn-primary.btn-fill:hover:not(:disabled) {
+  background-color: #4338ca;
+  border-color: #4338ca;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+.btn-primary.btn-fill:active:not(:disabled) {
+  background-color: #3730a3;
+  border-color: #3730a3;
+}
+
+/* Primary Outline */
+.btn-primary.btn-outline {
+  background-color: transparent;
+  color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.btn-primary.btn-outline:hover:not(:disabled) {
+  background-color: #f0f4ff;
+  color: #4338ca;
+  border-color: #4338ca;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
+}
+
+.btn-primary.btn-outline:active:not(:disabled) {
+  background-color: #e8ecff;
+  color: #3730a3;
+  border-color: #3730a3;
+}
+
+/* ===== SECONDARY BUTTON ===== */
+
+/* Secondary Fill */
+.btn-secondary.btn-fill {
+  background-color: #6b7280;
+  color: #ffffff;
+  border-color: #6b7280;
+}
+
+.btn-secondary.btn-fill:hover:not(:disabled) {
+  background-color: #4b5563;
+  border-color: #4b5563;
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+}
+
+.btn-secondary.btn-fill:active:not(:disabled) {
+  background-color: #374151;
+  border-color: #374151;
+}
+
+/* Secondary Outline */
+.btn-secondary.btn-outline {
+  background-color: transparent;
+  color: #6b7280;
+  border-color: #6b7280;
+}
+
+.btn-secondary.btn-outline:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border-color: #4b5563;
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.2);
+}
+
+.btn-secondary.btn-outline:active:not(:disabled) {
+  background-color: #e5e7eb;
+  color: #374151;
+  border-color: #374151;
+}
+
+/* ===== DEFAULT BUTTON ===== */
+
+/* Default Fill */
+.btn-default.btn-fill {
+  background-color: #f3f4f6;
+  color: #171717;
+  border-color: #d1d5db;
+}
+
+.btn-default.btn-fill:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  color: #000000;
+  border-color: #9ca3af;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-default.btn-fill:active:not(:disabled) {
+  background-color: #d1d5db;
+  color: #000000;
+  border-color: #6b7280;
+}
+
+/* Default Outline */
+.btn-default.btn-outline {
+  background-color: transparent;
+  color: #171717;
+  border-color: #d1d5db;
+}
+
+.btn-default.btn-outline:hover:not(:disabled) {
+  background-color: #f9fafb;
+  color: #000000;
+  border-color: #9ca3af;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-default.btn-outline:active:not(:disabled) {
+  background-color: #f3f4f6;
+  color: #000000;
+  border-color: #6b7280;
+}
+
+/* ===== FULL WIDTH ===== */
+.btn-full-width {
+  width: 100%;
+}
+
+/* ===== DISABLED STATE ===== */
+.btn-disabled,
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  border-color: #d1d5db;
+}
+
+/* ===== LOADING STATE ===== */
+.btn-loading {
+  pointer-events: none;
+}
+
+.btn-loader {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-loader-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 0.8s linear infinite;
+}
+
+.btn-primary.btn-loading .btn-loader-spinner,
+.btn-secondary.btn-loading .btn-loader-spinner {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+}
+
+.btn-default.btn-fill.btn-loading .btn-loader-spinner {
+  border-color: rgba(23, 23, 23, 0.3);
+  border-top-color: #171717;
+}
+
+.btn-default.btn-outline.btn-loading .btn-loader-spinner {
+  border-color: rgba(23, 23, 23, 0.3);
+  border-top-color: #171717;
+}
+
+.btn-primary.btn-outline.btn-loading .btn-loader-spinner {
+  border-color: rgba(79, 70, 229, 0.3);
+  border-top-color: #4f46e5;
+}
+
+.btn-secondary.btn-outline.btn-loading .btn-loader-spinner {
+  border-color: rgba(107, 114, 128, 0.3);
+  border-top-color: #6b7280;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== ICON STYLES ===== */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-left {
+  margin-right: 4px;
+}
+
+.btn-icon-right {
+  margin-left: 4px;
+}
+
+/* ===== FOCUS STATE ===== */
+.btn:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.btn-primary.btn-fill:focus-visible {
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1), 0 0 0 5px #4f46e5;
+}
+
+.btn-primary.btn-outline:focus-visible {
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.btn-secondary.btn-fill:focus-visible {
+  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.1), 0 0 0 5px #6b7280;
+}
+
+.btn-secondary.btn-outline:focus-visible {
+  box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.1);
+}
+
+.btn-default.btn-fill:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05), 0 0 0 5px #171717;
+}
+
+.btn-default.btn-outline:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .btn-lg {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
