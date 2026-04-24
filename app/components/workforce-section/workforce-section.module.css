@@ -1,0 +1,48 @@
+.workforceSection {
+  padding: 60px 0;
+}
+
+.workforceContainer {
+  max-width: 1244px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.workforceTitle {
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.workforceGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.workforceHeading {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.workforceDetails {
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .workforceGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .workforceItem {
+    padding: 10px 25px;
+    border-left: 1px dashed #191919;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .companiesList {
+    gap: 56px;
+  }
+}

@@ -1,0 +1,137 @@
+.footer {
+  background-color: var(--color-secondary);
+  padding: 50px 0px;
+  padding-top: 45%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.container {
+  max-width: 1244px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.copy {
+  font-size: 14px;
+  color: #6b7280;
+  font-family: var(--font-inter);
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+}
+
+.link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #0c5b3c;
+}
+
+.footerLeft {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.footerContent {
+    font-weight: 400;
+    max-width: 350px;
+    color: var(--color-text-dark);
+}
+
+.footerSocialMenu {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.footerSocialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.footerSocialLink svg {
+    stroke: var(--color-secondary);
+    height: 20px;
+    width: 20px;
+}
+
+.footerSocialLink:hover svg {
+    stroke: var(--white-color);
+}
+
+.footerRight {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 20px;
+    width: 100%;
+}
+
+.footerMenuHeading {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.footerMenuList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footerMenuLink {
+    color: rgba(3, 14, 9, 0.85);
+    transition: 0.15s all ease-in-out;
+}
+
+.footerMenuLink:hover {
+    color: var(--color-text-dark);
+}
+
+@media screen and (min-width: 991px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footerRight {
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+        width: auto;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        padding: 96px 0px;
+    }
+
+    .footerRight {
+        grid-template-columns: repeat(3, minmax(160px, 1fr));
+    }
+
+    .footerMenuList {
+        gap: 16px;
+    }
+}

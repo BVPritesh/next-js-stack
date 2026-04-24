@@ -1,0 +1,146 @@
+.contactUsSection {
+  padding: 50px 0px;
+}
+
+.contactUsContainer {
+  max-width: 1244px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  align-items: flex-start;
+  justify-content: space-between;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+  flex-direction: column;
+}
+
+.contactUsImageWrapper {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.contactUsImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contactUsImageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#0000 0 50%, #000c 100%);
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.contactUsImageCaption {
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+}
+
+.contactUsImageDesc {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 30px;
+    max-width: 430px;
+}
+
+.contactUsImageContent {
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+
+.contactUsImageName {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    position: relative;
+}
+
+.contactUsImageName::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 8px;
+    height: 8px;
+    width: 8px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    display: inline-block;
+}
+
+.contactUsImageDesignation {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.contactUsFormWrapper {
+    border-radius: 30px;
+    padding: 30px 30px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-light);
+}
+
+.contactUsFormWrapper > p {
+    margin-bottom: 10px;
+}
+
+.contactUsFormWrapper > h2 {
+    margin-bottom: 15px;
+}
+
+.contactUsForm {
+    margin-top: 20px;
+}
+
+.contactUsFormGroup {
+    padding-bottom: 20px;
+}
+
+.contactUsFormGroup > label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.contactUsFormGroup > input,
+.contactUsFormGroup > textarea {
+    border-radius: 6px;
+    padding: 8px 15px;
+    width: 100%;
+    border: 1px solid #191919;
+    outline: none;
+    min-height: 46px;
+    font-size: 14px;
+}
+
+.contactUsFormGroup > textarea {
+    resize: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .contactUsContainer {
+        gap: 16px;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contactUsSection {
+        padding: 96px 0px;
+    }
+
+}

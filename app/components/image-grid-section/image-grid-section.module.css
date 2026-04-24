@@ -1,0 +1,47 @@
+.imageGridSection {
+  background-color: var(--color-light);
+  padding: 60px 0;
+}
+
+.imageGridContainer {
+  max-width: 1244px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.imageGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imageGridItem {
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+  .imageGridItem:first-child {
+    grid-column: span 5;
+  }
+
+  .imageGridItem:nth-child(2) {
+    grid-column: span 3;
+  }
+
+  .imageGridItem:nth-child(3) {
+    grid-column: span 4;
+  }
+}

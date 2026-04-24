@@ -8,6 +8,17 @@
   --secondary-color: #6b7280;
   --background-color: #f9fafb;
   --foreground-color: #171717;
+  --color-primary: #063b26;
+  --color-secondary: #cfff91;
+  --color-tertiary: #fdeb69;
+  --color-quaternary: #fcc091;
+  --color-body: #fff;
+  --color-border: #eaeaea;
+  --color-light: #f5f6f4;
+  --color-dark: ;
+  --color-text: #4b5852;
+  --color-text-dark: #030e09;
+  --color-text-light: #f5f6f4;
 }
 
 /* ===== Reset CSS ===== */
@@ -79,4 +90,135 @@ svg {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.container {
+  max-width: 1244px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+h1,
+.h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h6,
+.h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.absolute, .sr-only {
+    position: absolute;
+}
+
+.sr-only {
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .main-wrapper {
+    padding-top: 80px;
+  }
+
+  h1,
+  .h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  h2,
+  .h2 {
+    font-size: 32px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 28px;
+  }
+
+  h4,
+  .h4 {
+    font-size: 22px;
+  }
+
+  h5,
+  .h5 {
+    font-size: 18px;
+  }
+
+  h6,
+  .h6 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1,
+  .h1 {
+    font-size: 48px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 36px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 30px;
+  }
+
+  h4,
+  .h4 {
+    font-size: 24px;
+  }
+
+  h5,
+  .h5 {
+    font-size: 20px;
+  }
+
+  h6,
+  .h6 {
+    font-size: 16px;
+  }
 }
