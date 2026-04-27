@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <>
         <HeroSection
-            heroContainerFull={true}
+            heroContainerFull={false}
             heroTitle="Contact Us"
             heroDescription="Have questions or want to work together? We&apos;d love to hear from you.
             Reach out using the details below or send us a message."

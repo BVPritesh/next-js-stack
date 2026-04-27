@@ -1,0 +1,237 @@
+/* ─── AccordionSection.module.css ─────────────────────────────────────────── */
+/* Scoped to this component only — will never bleed into other components.     */
+
+/* ── Section wrapper ── */
+.section {
+  width: 100%;
+  padding: 64px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+/* ── Left: Image Panel ── */
+.imagePanel {
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  /* 3:4 portrait ratio — same as the screenshot */
+  padding-bottom: 125%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px;
+  /* Fade-in when key changes (image swaps) */
+  animation: imageFadeIn 0.4s ease forwards;
+}
+
+@keyframes imageFadeIn {
+  from { opacity: 0; transform: scale(1.03); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Right: Content Panel ── */
+.contentPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111111;
+  margin: 0 0 4px;
+  letter-spacing: -0.5px;
+}
+
+.subheading {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0 0 20px;
+  max-width: 480px;
+}
+
+/* ── Accordion list ── */
+.accordionList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.accordionItem:first-child {
+  border-top: 1px solid #E5E5E5;
+}
+
+/* ── Trigger button ── */
+.accordionTrigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  transition: background 0.2s;
+  padding: 18px 12px;
+}
+
+.accordionTrigger:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.itemNumber {
+  font-size: 13px;
+  font-weight: 500;
+  color: #999999;
+  min-width: 28px;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.itemTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111111;
+  flex: 1;
+  transition: color 0.2s;
+}
+
+.chevron {
+  color: #999999;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.2s;
+}
+
+/* Active state */
+.accordionTrigger.active .itemNumber {
+  color: #111111;
+}
+
+.accordionTrigger.active .chevron {
+  transform: rotate(180deg);
+  color: #111111;
+}
+
+/* ── Accordion body — CSS-only expand/collapse ── */
+.accordionBody {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  overflow: hidden;
+}
+
+.accordionBody > * {
+  overflow: hidden;
+}
+
+.bodyOpen {
+  grid-template-rows: 1fr;
+  background: transparent;
+}
+
+.accordionItem:has(.bodyOpen) {
+  background: #F7F7F7;
+  border-radius: 8px;
+  border-bottom: none;
+  margin-bottom: 1px;
+}
+
+.accordionItem:has(.bodyOpen) .accordionBody {
+  padding: 0 18px 12px;
+}
+
+.itemDescription {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #555555;
+  margin: 0;
+}
+
+
+/* ── Responsive ── */
+
+/* Tablet: stack vertically, image on top */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imagePanel {
+    min-height: 320px;
+    padding: 24px;
+  }
+
+  .imageWrapper {
+    padding-bottom: 75%; /* wider ratio on tablet */
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+    gap: 28px;
+  }
+
+  .imagePanel {
+    min-height: 260px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .imageWrapper {
+    padding-bottom: 90%;
+    border-radius: 12px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .accordionTrigger {
+    padding: 14px 0;
+  }
+
+  .itemTitle {
+    font-size: 15px;
+  }
+}

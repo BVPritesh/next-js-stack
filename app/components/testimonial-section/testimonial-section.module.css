@@ -1,0 +1,100 @@
+.testimonialSection {
+  padding: 60px 0;
+}
+
+.testimonialContainer {
+  max-width: 1244px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+.testimonialSlider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 15px;
+  background-color: var(--color-secondary);
+  padding: 30px 20px;
+  position: relative;
+}
+
+.testimonialSlider > div {
+  width: 100%;
+}
+
+.testimonialSlideItem {
+  max-width: 645px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonialSlideContent {
+  font-size: 30px;
+  line-height: 46px;
+}
+
+.testimonialSlideData {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonialSlideDataContent {
+  text-align: left;
+}
+
+.testimonialSlideHeading {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.testimonialSlideText {
+  font-size: 14px;
+}
+
+
+.swiperButtonPrev,
+.swiperButtonNext {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.swiperButtonPrev {
+  left: 24px;
+}
+.swiperButtonNext {
+  right: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonialSlider {
+    padding: 60px 50px;
+  }
+}
